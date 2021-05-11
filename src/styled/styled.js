@@ -33,6 +33,15 @@ export const Centered = styled.div`
     align-items:center;
 `
 
+export const SpreadedVerticalWrapper = styled.div`
+    height:100%;
+    text-align:center;
+    display:flex;
+    flex-direction:column;
+    justify-content:space-between;
+    aling-items:center;    
+`
+
 export const Columned = styled.div`
     display:flex;
     flex-direction:column;

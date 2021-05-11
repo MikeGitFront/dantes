@@ -1,67 +1,109 @@
-import React, { useContext, useState } from 'react'
-import { Centered, Columned, MyButton, PageWrapper } from '../styled/styled'
+import React, { useContext } from 'react'
+import { Centered, PageWrapper } from '../styled/styled'
 import { MyContext } from '../App'
 import { useHistory } from 'react-router'
-import styled from 'styled-components'
-
-const MyInput = styled.input`
-    border:none;
-    border-bottom:1px solid #555;
-    margin-bottom:10px;
-    outline:none;
-    padding:8px 2px;
-    min-width:280px;
-    max-width:
-`
+import { Button, Form, Input, notification } from 'antd'
+import Checkbox from 'antd/lib/checkbox/Checkbox'
+import 'antd/dist/antd.css'
+import { UserOutlined, LockOutlined } from '@ant-design/icons'
 
 const Login = () => {
     const { setIsLogged } = useContext(MyContext)
-    const [email, setEmail] = useState('')
-    const [password, setPassword] = useState('')
+    const [form] = Form.useForm()
     const history = useHistory()
 
-    const logIn = (e) => {
-        e.preventDefault()
-        validateLogin()
-    }
-
-    const validateLogin = () => {
-        if (email === 'Colourful' && password === 'NotReally22') {
+    const validateLogin = (values) => {
+        const key = `open${Date.now()}`;
+        if (values.email === 'Colourful@mail.ru' && values.password === 'NotReally22') {
             setIsLogged(true)
-            alert('Successfully logged in')
+            notification['success']({
+                key,
+                message: 'Success',
+                description:
+                    'Successfully logged in!',
+                onClick: () => {
+                    notification.close(key)
+                },
+            })
             history.push('/user')
+            form.resetFields()
         }
         else {
-            alert('Incorrent values')
-            setEmail('')
-            setPassword('')
+            notification['error']({
+                key,
+                message: 'Failed',
+                description:
+                    'Incorrect values. Try once more!',
+                onClick: () => {
+                    notification.close(key)
+                },
+            })
         }
 
     }
 
     return (
         <Centered>
-            <PageWrapper>
-                <form onSubmit={logIn} >
-                    <h1 style={{ textAlign: 'center', color: 'white' }}>Log in</h1>
-                    <Columned
-                        style={{ marginTop: '20px' }}
+            <PageWrapper style={{ backgroundColor: 'white', flexDirection: 'column' }}>
+                <h1 style={{ marginBottom: '35px' }}>TO START PLAYING JUST LOG IN</h1>
+                <Form
+                    form={form}
+                    style={{
+                        width: '100%',
+                        maxWidth: '600px',
+                        padding: '0 30px'
+                    }}
+                    name="basic"
+                    initialValues={[
+                        {
+                            remember: 'true',
+                            email: '',
+                            password: '',
+                        }
+                    ]}
+                    onFinish={validateLogin}
+                    onFinishFailed={validateLogin}
+                >
+                    <Form.Item
+
+                        name="email"
+                        rules={[
+                            {
+                                type: 'email',
+                                required: true,
+                                message: 'Please input your email!',
+                            },
+                        ]}
                     >
-                        <p style={{ color: 'white' }}>Email: Colourful</p>
-                        <MyInput
-                            value={email}
-                            type="email"
-                            onChange={e => setEmail(e.target.value)} />
-                        <p style={{ color: 'white' }}>Password: NotReally22</p>
-                        <MyInput
-                            value={password}
-                            type="password"
-                            onChange={e => setPassword(e.target.value)} />
-                    </Columned>
-                    <MyButton style={{ textAlign: 'center' }}
-                        onClick={logIn}
-                    >Submit</MyButton>
-                </form>
+                        <Input prefix={<UserOutlined />} placeholder="Email" />
+                    </Form.Item>
+
+                    <Form.Item
+
+                        name="password"
+                        rules={[
+                            {
+                                required: true,
+                                message: 'Please input your password!',
+                            },
+                        ]}
+                    >
+                        <Input.Password
+                            prefix={<LockOutlined className="site-form-item-icon" />}
+                            placeholder="Password"
+                        />
+                    </Form.Item>
+
+                    <Form.Item name="remember" valuePropName="checked">
+                        <Checkbox>Remember me</Checkbox>
+                    </Form.Item>
+
+                    <Form.Item >
+                        <Button type="primary" htmlType="submit">
+                            Submit
+        </Button>
+                    </Form.Item>
+                </Form>
             </PageWrapper>
         </Centered >
     )

@@ -16,6 +16,7 @@ import About from './pages/About'
 import { useState } from "react"
 import Login from "./pages/Login"
 import Background from './images/111.jpg';
+import { v4 as uuidv4 } from 'uuid'
 
 const Application = styled.div`
     width:100%;
@@ -31,12 +32,85 @@ const Wrapper = styled.div`
 `
 
 export const MyContext = React.createContext()
-
 const App = () => {
   const [isLogged, setIsLogged] = useState(false)
+  const [currentRooms, setCurrentRooms] = useState([
+    {
+      title: 'First room',
+      category: 'sport',
+      full: false,
+      image: '',
+      allowedAge: '6',
+      id: uuidv4(),
+    },
+    {
+      title: 'Second room',
+      category: 'sport',
+      full: false,
+      image: '',
+      allowedAge: '6',
+      id: uuidv4(),
+    },
+    {
+      title: 'Third room',
+      category: 'sport',
+      full: false,
+      image: '',
+      allowedAge: '6',
+      id: uuidv4(),
+    },
+    {
+      title: 'Fourth room',
+      category: 'sport',
+      full: false,
+      image: '',
+      allowedAge: '6',
+      id: uuidv4(),
+    },
+    {
+      title: 'Fifth room',
+      category: 'sport',
+      full: false,
+      image: '',
+      allowedAge: '6',
+      id: uuidv4(),
+    },
+    {
+      title: 'Sixth room',
+      category: 'sport',
+      full: false,
+      image: '',
+      allowedAge: '6',
+      id: uuidv4(),
+    },
+    {
+      title: 'Seventh room',
+      category: 'sport',
+      full: false,
+      image: '',
+      allowedAge: '6',
+      id: uuidv4(),
+    },
+    {
+      title: 'Eights room',
+      category: 'sport',
+      full: false,
+      image: '',
+      allowedAge: '6',
+      id: uuidv4(),
+    },
+    {
+      title: 'Ninth room',
+      category: 'sport',
+      full: false,
+      image: '',
+      allowedAge: '6',
+      id: uuidv4(),
+    },
+  ])
 
   return (
-    <MyContext.Provider value={{ isLogged, setIsLogged }}>
+    <MyContext.Provider value={{ isLogged, setIsLogged, setCurrentRooms, currentRooms }}>
       <Application style={{
         backgroundImage: `url('${Background}')`,
         backgroundPosition: 'center',
@@ -57,7 +131,9 @@ const App = () => {
               :
               <Route exact path="/login" component={Login} />
             }
-            <Route exact path="/rooms" component={Rooms} />
+            <Route exact path="/rooms"  >
+              <Rooms rooms={currentRooms} />
+            </Route>
             <Route exact path="/suggest" component={Suggest} />
             <Route exact path="/search" component={Search} />
           </Wrapper>
