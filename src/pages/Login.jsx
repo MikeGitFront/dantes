@@ -44,7 +44,7 @@ const Login = () => {
 
     return (
         <Centered>
-            <PageWrapper style={{ backgroundColor: 'white', flexDirection: 'column' }}>
+            <PageWrapper style={{ backgroundColor: 'white', border: '1px solid #333', boxShadow: '0px 0px 4px 1px #333', flexDirection: 'column' }}>
                 <h1 style={{ marginBottom: '35px' }}>TO START PLAYING JUST LOG IN</h1>
                 <Form
                     form={form}
@@ -65,7 +65,7 @@ const Login = () => {
                     onFinishFailed={validateLogin}
                 >
                     <Form.Item
-
+                        style={{ border: '1px solid #333', borderRadius: '4px' }}
                         name="email"
                         rules={[
                             {
@@ -79,7 +79,7 @@ const Login = () => {
                     </Form.Item>
 
                     <Form.Item
-
+                        style={{ border: '1px solid #333', borderRadius: '4px' }}
                         name="password"
                         rules={[
                             {
@@ -101,7 +101,7 @@ const Login = () => {
                     <Form.Item >
                         <Button type="primary" htmlType="submit">
                             Submit
-        </Button>
+                        </Button>
                     </Form.Item>
                 </Form>
             </PageWrapper>

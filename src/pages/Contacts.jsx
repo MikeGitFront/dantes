@@ -5,7 +5,7 @@ const Contacts = () => {
     return (
         <Centered>
             <PageWrapper>
-                <h1 style={{ color: 'white' }}>Contacts</h1>
+                <h1 style={{ color: '#333' }}>Contacts</h1>
             </PageWrapper>
         </Centered>
     )

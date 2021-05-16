@@ -16,7 +16,7 @@ const Header = () => {
     return (
         <Wrapper>
             <Row>
-                <Link style={{ fontSize: '44px', textDecoration: 'none', color: 'black' }} to="/" >Logo</Link>
+                <Link style={{ fontSize: '44px', textDecoration: 'none', color: 'black' }} to="/" >Dantes</Link>
                 <Row style={{ fontSize: '36px', marginTop: '10px' }}>
                     <Link
                         style={{

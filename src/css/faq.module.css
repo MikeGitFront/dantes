@@ -1,5 +1,5 @@
 .text {
-  color: white;
+  color: #333;
 }
 
 .wrapper {
@@ -16,7 +16,7 @@
 }
 
 .questiontext {
-  color: white;
+  color: #333;
   font-size: 16px;
 }
 
@@ -28,7 +28,7 @@
 }
 
 .questionInput {
-  border: none;
+  border: 1px solid #333;
   padding: 6px;
   border-radius: 8px;
   width: 350px;
@@ -43,16 +43,16 @@
   background: transparent;
   border: none;
   background: black;
-  border: 1px solid white;
-  color: white;
+  border: 1px solid #fff;
+  color: #fff;
   padding: 10px;
   cursor: pointer;
   border-radius: 10px;
-  transition: 2s all ease;
+  transition: 0.2s all linear;
 }
 
 .questionButton:hover {
   border: 1px solid black;
   color: black;
-  background: white;
+  background: #fff;
 }

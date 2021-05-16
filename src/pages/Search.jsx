@@ -5,7 +5,7 @@ const Search = () => {
     return (
         <Centered>
             <PageWrapper>
-                <h1 style={{ color: 'white' }}>Search</h1>
+                <h1 style={{ color: '#333' }}>Search</h1>
             </PageWrapper>
         </Centered>
     )

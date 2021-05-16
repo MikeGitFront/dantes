@@ -16,7 +16,7 @@ const User = () => {
         <Centered>
             <PageWrapper>
                 <Columned>
-                    <h1 style={{ color: 'white' }}>User</h1>
+                    <h1 style={{ color: '#333' }}>User</h1>
                     <MyButton
                         onClick={logOut}
                     >Log out</MyButton>

@@ -11,7 +11,7 @@
 }
 
 .regText {
-  color: white;
+  color: #333;
   font-size: 25px;
   margin: 0;
 }
@@ -40,16 +40,16 @@
 .regButton {
   background: transparent;
   padding: 8px 20px;
-  color: white;
+  color: #333;
   border: none;
-  border: 1px solid white;
+  border: 1px solid #333;
   border-radius: 20px;
   transition: 1s all ease-in;
   cursor: pointer;
 }
 
 .regButton:hover {
-  background-color: white;
+  background-color: #333;
   color: black;
   border: 1px solid black;
 }

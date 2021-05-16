@@ -12,17 +12,16 @@ export const PageWrapper = styled.div`
   min-width: 50vw;
   min-height: 50vh;
   border-radius: 40px;
-  background-color: rgba(0, 0, 0, 0.5);
+  background-color: #fff;
+  border:1px solid #333;
+  box-shadow: 0px 0px 4px 1px #333;
   transition: 0.4s all ease;
-  &:hover {
-    background-color: rgba(0, 0, 0, 0.2);
-  }
 `
 
 export const Wrapper = styled.div`
   padding: 10px 20px;
   width: 100%;
-  background-color: rgba(255, 255, 255, 0.4);
+  background-color: rgba(255, 255, 255, 1);
   font-size: 24px;
   box-shadow: 0px 0px 4px 1px black;
 `
@@ -52,7 +51,7 @@ export const Columned = styled.div`
 export const MyButton = styled.div`
   outline: none;
   border: none;
-  color: white;
+  color: #fff;
   background-color: black;
   transition: 1s all ease;
   cursor: pointer;
@@ -60,7 +59,7 @@ export const MyButton = styled.div`
   border-radius: 4px;
   &:hover {
     color: black;
-    background-color: white;
+    background-color: #fff;
   }
 `
 
@@ -70,7 +69,7 @@ export const Registration = styled.div`
   flex-direction: column;
 `
 export const RegText = styled.div`
-  color: white;
+  color: #333;
   font-size: 25px;
   font-weight: bold;
 `

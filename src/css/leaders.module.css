@@ -10,27 +10,26 @@
 .userWrapper {
   display: flex;
   justify-content: space-between;
-  /* align-items: center; */
-  border: 1px solid white;
+  border: 1px solid #333;
   max-width: 2000px;
   width: 100%;
   padding: 10px 150px;
 }
 
 .heading {
-  color: white;
+  color: #333;
 }
 
 .name {
-  color: white;
+  color: #333;
 }
 
 .score {
-  color: white;
+  color: #333;
 }
 
 .text {
   margin-top: 12px;
-  color: white;
+  color: #333;
   font-size: 20px;
 }
