@@ -5,12 +5,21 @@
   align-items: center;
 }
 
-.firstText {
-  color: white;
-  font-size: 30px;
-}
-
-.text {
+.p {
   color: white;
   font-size: 20px;
+}
+
+.h {
+  color: white;
+  font-size: 50px;
+}
+
+.a {
+  color: red;
+  transition: 2s all ease-out;
+}
+
+.a:hover {
+  color: white;
 }

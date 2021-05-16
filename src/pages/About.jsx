@@ -9,7 +9,7 @@ const About = () => {
         <div className={style.wrapper}>
           <h1 className={style.firstText}>Welcome to Dantes!</h1>
           <p className={style.text}>
-            This is a web application for your leisure time
+            This is a web application for your leisure time.
           </p>
         </div>
       </PageWrapper>
