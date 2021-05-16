@@ -1,0 +1,9 @@
+.text {
+  color: white;
+}
+
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+}
