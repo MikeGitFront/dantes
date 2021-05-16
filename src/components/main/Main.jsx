@@ -34,7 +34,7 @@ const Main = () => {
               />
             </div>
             <div className={style.regFormItem}>
-              <p className={style.regText}>Reapeat your password:</p>
+              <p className={style.regText}>Repeat your password:</p>
               <input
                 type="password"
                 placeholder="Repeat password"

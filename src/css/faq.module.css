@@ -7,3 +7,52 @@
   flex-direction: column;
   text-align: center;
 }
+
+.questionWrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.questiontext {
+  color: white;
+  font-size: 16px;
+}
+
+.questionForm {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.questionInput {
+  border: none;
+  padding: 6px;
+  border-radius: 8px;
+  width: 350px;
+  margin-bottom: 20px;
+}
+
+.questionInput:focus {
+  outline: none;
+}
+
+.questionButton {
+  background: transparent;
+  border: none;
+  background: black;
+  border: 1px solid white;
+  color: white;
+  padding: 10px;
+  cursor: pointer;
+  border-radius: 10px;
+  transition: 2s all ease;
+}
+
+.questionButton:hover {
+  border: 1px solid black;
+  color: black;
+  background: white;
+}

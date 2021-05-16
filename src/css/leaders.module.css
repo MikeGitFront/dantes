@@ -1,0 +1,36 @@
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  max-width: 2000px;
+  width: 100%;
+}
+
+.userWrapper {
+  display: flex;
+  justify-content: space-between;
+  /* align-items: center; */
+  border: 1px solid white;
+  max-width: 2000px;
+  width: 100%;
+  padding: 10px 150px;
+}
+
+.heading {
+  color: white;
+}
+
+.name {
+  color: white;
+}
+
+.score {
+  color: white;
+}
+
+.text {
+  margin-top: 12px;
+  color: white;
+  font-size: 20px;
+}
